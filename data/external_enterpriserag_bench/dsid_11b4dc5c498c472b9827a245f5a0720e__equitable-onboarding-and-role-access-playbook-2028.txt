@@ -1,0 +1,114 @@
+TITLE: Equitable Onboarding and Role Access Playbook
+ORGANIZATION: Northwind Analytics
+DEPARTMENT: Engineering
+SENSITIVITY: Internal
+VERSION: 1.0
+EFFECTIVE_DATE: 2026-01-01
+SOURCE_DATASET: EnterpriseRAG-Bench (onyx-dot-app, MIT license, https://github.com/onyx-dot-app/EnterpriseRAG-Bench)
+
+Equitable Onboarding and Role Access Playbook
+
+Overview:
+
+This playbook defines a standardized, equity-focused process for onboarding new hires and contractors, assigning role ladders, and granting access to internal tools and benefits at Redwood. It consolidates checklists, role-to-access mappings, escalation paths, and temporary-access policies so teams can deliver consistent experiences while minimizing security risk and administrative overhead.
+
+Principles:
+- Fast and predictable: new team members should have core access within 24 hours of start for standard hires and 72 hours for contractors requiring background checks.
+- Least privilege by default: grant the minimum access necessary for the role, with clear escalation paths for additional privileges.
+- Equity-first: ensure accommodations and benefit enrollments are automatic where possible and that managers are notified of outstanding tasks.
+- Auditability: every access grant and exception must have an owner, a justification, and an expiration.
+
+Scope:
+- Applies to all full-time employees (FTE), part-time employees (PTE), and long-term contractors (>30 days).
+- Excludes short contractors (<30 days) who receive a reduced, timeboxed access profile (see section \"Temporary contractor access\").
+- Covers system access, hardware provisioning, benefits enrollment, and role ladder placement.
+
+Role Ladder & Access Matrix (excerpt):
+| Role level | Typical title examples | Default access group(s) | Manager approval required? | People-ops review window |
+|---|---|---:|:---:|---:|
+| L1 - Associate | Associate SWE, Associate PM | core-read, email, slack | No | 24 hours |
+| L2 - IC | SWE II, PM II | core-read, core-write, repo-ci | No | 24 hours |
+| L3 - Senior IC | Senior SWE, Senior PM | core-read, core-write, prod-view | Yes (manager) | 48 hours |
+| L4 - Staff / Lead | Staff SWE, Lead PM | prod-write, infra-console | Yes (manager + infra-owner) | 72 hours |
+| L5 - Senior Staff / Dir | Dir Eng, Principal | infra-admin (request only), payroll-admin view | Yes (people-ops + security) | 5 business days |
+
+Notes: \"core-*\" groups include email, Slack, RedwoodPortal (SSO) and documentation access. \"prod-*\" groups require signed infra policies and manager justification.
+
+Onboarding Checklist (first 72 hours):
+1. Pre-Start (people-ops): create HR profile, invite to RedwoodPortal, prepare equipment order, and schedule orientation.
+2. Day 0 (IT/People-ops): provision laptop, default Slack/email access, enroll in SSO (RDW-SSO), and assign mentor.
+3. Day 1 (Hiring Manager): complete role orientation, confirm role ladder level and responsibilities, and submit any additional access requests via RedwoodAccess.
+4. Day 3 (Manager & Team): complete security training, assign initial project repo permissions, and verify access to CI/CD dashboards.
+5. Day 30/60/90: checkpoint meetings, performance expectations, and benefits enrollment confirmation.
+
+Access Request Workflows:
+- Self-Serve (recommended):
+  1. Use RedwoodPortal > Access Requests > Select role profile (L1-L5) or custom entitlement.
+  2. Attach manager approval (email or single-click approval token).
+  3. People-ops automatically verifies benefits enrollment and triggers provisioning pipelines.
+- Manual (for exceptions):
+  1. Manager files a ticket in ServiceDesk (tag: access-exception).
+  2. Security reviews justification within 24 business hours.
+  3. If approved, request includes an expiration date (default 30 days) and an assigned owner.
+
+CLI Example (for infra owners):
+```
+# Grant temporary read-only access to infra-console for user
+rdwctl iam grant --user alice@redwood.ai --group infra-console-read --expires 2028-08-01 --reason \"oncall support\"
+```
+
+Tool Access Mapping (default profiles):
+| Tool | Purpose | Default profile | Request path |
+|---|---|---|---|
+| Slack | Team communication | core-read | auto via SSO onboarding |
+| RedwoodRepo | Code hosting | repo-ci for L2+, repo-write for L3+ | RedwoodPortal (manager attach) |
+| Infra Console | Production dashboards & controls | prod-view for L3, prod-write for L4 | Manager + infra-owner approval |
+| Payroll & Benefits Portal | Compensation & benefits | hr-view for people-ops, payroll-init for managers | People-ops provisioning |
+| CI/CD (Forge) | Build/Deploy pipelines | repo-ci | Auto if repo access granted |
+
+Benefits Activation Steps (within 30 days):
+- Health & dental: People-ops auto-enrolls based on hire type; new hires must complete beneficiary forms in BenefitsPortal.
+- Equity / RSUs: Grant letters are uploaded to CompensationHub and employees confirm tax residency via the payroll portal.
+- Parental & sabbatical leave: Submit intent form in LeaveTracker; pre-approved for eligible employees and require manager + people-ops signoff.
+- Hybrid/office stipend: One-time request through ExpensePortal; receipts accepted in 90 days.
+
+First 90 Days: Manager Playbook (high-level):
+- Week 1: Role clarity, project onboarding, buddy pairing, and mandatory security refresher.
+- End of Month 1: Deliverables check-in, early feedback, and benefits confirmation.
+- End of Month 3: Formal 90-day review, career ladder calibration, and if applicable start of compensation review window.
+
+Temporary Contractor Access: 
+- Contractors receive a \"contractor-min\" profile by default (email, documentation read, limited repo access).
+- Requests for elevated access must be approved by manager and people-ops and are timeboxed with automated revocation.
+- Background checks required for access to production systems; provisioning blocked until check passes.
+
+Exceptions & Audit Requirements:
+- Any deviation from the role-to-access matrix must include: approver (manager name), justification, and expiration date.
+- All exceptions are surfaced weekly to Security and People-Ops for review; long-running exceptions (>90 days) require executive sponsor.
+
+Ownership & SLAs:
+- People-ops: owner for onboarding flow and benefits activation (SLA: 24 hours for core access provisioning).
+- IT/Infrastructure: owner for hardware and privileged infra roles (SLA: 72 hours for hardware).
+- Security: owner for exception review and sensitive access audits (SLA: 24 business hours for exception triage).
+
+Common Scenarios & Quick Steps:
+- Lost laptop: contact IT via ServiceDesk -> ticket auto-creates a device-revoke flow -> security locks account.
+- Manager change of level (promotion): manager files \"role-change\" in RedwoodPortal -> people-ops updates HR profile -> infra provisioning updates group memberships.
+
+Related pages:
+- company-handbook/05_internal-tools/onboarding-toolchain-access-and-career-checkpoints-2025.json
+- company-handbook/01_working-at-redwood/employee-success-pathways-and-tooling-handbook-2027.json
+
+Appendix: Standard templates (copyable)
+- Manager approval justification (short):
+  - Employee: {{name}} | Role: {{role}} | Justification: {{reason}} | Duration: {{days}} | Approver: {{manager}}
+
+- Exception record CSV header sample:
+  employee_email,approver,justification,approved_on,expires_on,owner
+
+Contact & Escalation:
+- People-Ops ticket queue: people-ops@redwood.ai (monitored 08:00–18:00 PT)
+- On-call security pager: +1-555-0102 (for production access incidents)
+- IT hardware team: it-ops@redwood.ai
+
+This playbook is maintained by People Operations. Suggested updates should be submitted via the internal doc review workflow (RedwoodPortal -> Docs -> Edit Suggestion).
