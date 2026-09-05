@@ -68,28 +68,47 @@ If you're new to the codebase: start by reading README.md, then docs/architectur
 
 
 	1. Check prerequisites
-	Make sure Python 3.10+ is installed (python3 --version). You'll also need pip. No Node.js or other runtime is required to run the app itself — that's only needed if you want to regenerate the document-generator scripts.
-	2
-	Open a terminal in the project folder
+	Make sure Python 3.10+ is installed (python3 --version). 
+	You'll also need pip. No Node.js or other runtime is required to run the app itself — that's only needed if you want to regenerate the document-generator scripts.
+	
+	2. Open a terminal in the project folder
 	cd into the folder containing app.py, config.py, ingestion/, rag/, data/, etc. If you're using VS Code, open this folder and use the integrated terminal (Ctrl+`).
-	3
-	Create and activate a virtual environment
-	python3 -m venv venv, then activate it: source venv/bin/activate (macOS/Linux) or venv\Scripts\Activate.ps1 (Windows PowerShell). You should see (venv) at the start of your prompt once it's active.
-	4
-	Install dependencies
-	pip install -r requirements.txt (with the venv active). This installs openai, chromadb, streamlit, pypdf, python-docx, python-pptx, sentence-transformers, python-dotenv, and everything else the pipeline needs. The first install can take a few minutes.
-	5
-	Create your .env file
-	Copy .env.example to .env in the project root. Set RAG_MODE=free or RAG_MODE=paid. For free mode, add OPENROUTER_API_KEY=sk-or-... (get one at openrouter.ai/keys, no card needed). For paid mode, add OPENAI_API_KEY=sk-... instead. Double-check there's no stale RAG_MODE or API key already exported in your shell session — .env now overrides shell exports, but it's worth a fresh terminal to be safe.
-	6
-	Confirm all your documents are in data/sample_docs/
+	
+	3. Create and activate a virtual environment
+	python3 -m venv venv, 
+	
+	then activate it using below commands: 
+		Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+		source venv/bin/activate (macOS/Linux) 
+		or 
+		venv\Scripts\Activate.ps1 (Windows PowerShell). 
+		You should see (venv) at the start of your prompt once it's active.
+
+	4. Install dependencies
+	pip install -r requirements.txt (with the venv active). 
+	This installs openai, chromadb, streamlit, pypdf, python-docx, python-pptx, sentence-transformers, python-dotenv, and everything else the pipeline needs. 
+	The first install can take a few minutes.
+	
+	5. Create your .env file
+	Copy .env.example to .env in the project root. 
+	Set RAG_MODE=free or RAG_MODE=paid. For free mode, add OPENROUTER_API_KEY=sk-or-... 
+	(get one at openrouter.ai/keys, no card needed). For paid mode, add OPENAI_API_KEY=sk-... instead. 
+	Double-check there's no stale RAG_MODE or API key already exported in your shell session — .env now overrides shell exports, but it's worth a fresh terminal to be safe.
+
+	6. Confirm all your documents are in data/sample_docs/
 	This should include your original corpus plus everything we've added since: Global_Employee_Handbook.pdf, Q3_FY2026_Financial_Report.pdf, the 19 Northwind Analytics gap-filling documents, and the 12 rebranded documents from the last two batches. Also confirm data/external_enterpriserag_bench/ has its 10 files if you're using that source too.
-	7
-	Run ingestion (first time: use --reset)
-	python -m ingestion.ingest --dir data/sample_docs --reset, then python -m ingestion.ingest --dir data/external_enterpriserag_bench (no --reset, so it adds to the same collection). The --reset flag wipes any old/stale data and builds a clean manifest. First run in free mode will download the local embedding model (~90MB) — that's normal and only happens once. On every run AFTER this first one, drop --reset — delta ingestion will only embed new or changed files.
-	8
-	Launch the app
-	streamlit run app.py. Your terminal will print a Local URL, typically http://localhost:8501 — open that in your browser. The sidebar should show your current mode (🆓 FREE or 💳 PAID), department/sensitivity/organization filters, and how many chunks are indexed.
+	
+	7.	Run ingestion (first time: use --reset)
+		python -m ingestion.ingest --dir data/sample_docs --reset, 
+		then python -m ingestion.ingest --dir data/external_enterpriserag_bench (no --reset, so it adds to the same collection). 
+		The --reset flag wipes any old/stale data and builds a clean manifest. First run in free mode will download the local embedding model (~90MB) — that's normal and only happens once. 
+		On every run AFTER this first one, drop --reset — delta ingestion will only embed new or changed files.
+
+	8. Launch the app
+	streamlit run app.py
+	Your terminal will print a Local URL, typically http://localhost:8501 —  
+	open that in your browser. The sidebar should show your current mode (🆓 FREE or 💳 PAID), department/sensitivity/organization filters, and how many chunks are indexed.
 
 
 
