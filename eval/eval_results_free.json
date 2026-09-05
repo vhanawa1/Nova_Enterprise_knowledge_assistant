@@ -1,0 +1,412 @@
+{
+  "summary": {
+    "num_questions": 16,
+    "retrieval_hit_rate": 0.938,
+    "mean_reciprocal_rank": 0.812,
+    "avg_answer_keyword_coverage": 0.604,
+    "avg_latency_sec": 7.04,
+    "confidence_distribution": {
+      "High": 16
+    }
+  },
+  "results": [
+    {
+      "id": "q1",
+      "question": "How many days of annual leave do I accrue per year?",
+      "expected_source": "HR_Leave_Policy.pdf",
+      "retrieved_sources": [
+        "HR_Leave_Policy.pdf",
+        "Global_Employee_Handbook.pdf",
+        "Global_Employee_Handbook.pdf",
+        "Global_Employee_Handbook.pdf"
+      ],
+      "retrieval_hit": true,
+      "mrr": 1.0,
+      "answer": "You normally accrue **21\u202fworking days of annual leave per year** \u2013 that is\u202f1.75\u202fdays each month\u202f[ S1 ].\n\n**Location\u2011specific variations**\n\n| Country / Region | Annual\u2011leave entitlement (per the handbook) |\n|------------------|---------------------------------------------|\n| United Kingdom  | 28\u202fdays\u202f(including bank holidays)\u202f[ S2 ] |\n| France           | Minimum 24\u202fworking days (company policy\u202f28\u202fdays)\u202f[ S4 ] |\n| Japan            | 10\u201120\u202fdays, depending on tenure\u202f[ S3 ] |\n| Brazil           | 30\u202fdays\u202f[ S3 ] |\n| Mexico           | 12\u202fdays (increases with tenure)\u202f[ S3 ] |\n| United Arab Emirates | 30\u202fcalendar days\u202f[ S3 ] |\n\nIf you are based in a country not listed above, the default company policy of 21\u202fworking days applies. For a definitive answer, check the **HR portal** or contact your local HR representative, who can confirm the correct entitlement for your specific location and employment contract.",
+      "confidence": "High",
+      "confidence_score": 1.0,
+      "keyword_coverage": 1.0,
+      "matched_keywords": [
+        "21",
+        "1.75"
+      ],
+      "expected_keywords": [
+        "21",
+        "1.75"
+      ],
+      "latency_sec": 37.7
+    },
+    {
+      "id": "q2",
+      "question": "What should I do if my VPN connection keeps timing out?",
+      "expected_source": "IT_VPN_Support_Guide.docx",
+      "retrieved_sources": [
+        "IT_VPN_Support_Guide.docx",
+        "IT_VPN_Support_Guide.docx",
+        "IT_VPN_Support_Guide.docx",
+        "IT_VPN_Support_Guide.docx"
+      ],
+      "retrieval_hit": true,
+      "mrr": 1.0,
+      "answer": "If you see a **\u201cConnection Timed Out\u201d** error, follow these steps:\n\n1. Verify that your internet connection is working.  \n2. Confirm you are using the correct VPN gateway address (\u202fvpn.companyinternal.com\u202f).  \n3. Restart the GlobalProtect client service.  \n4. If the problem persists after **two** restarts, **escalate** the issue to the IT Helpdesk (raise a P2 ticket or call ext.\u202f4100)\u3010S1\u3011.  \n\nThese actions are the recommended fix for timeout problems in the VPN guide\u3010S1\u3011.",
+      "confidence": "High",
+      "confidence_score": 1.0,
+      "keyword_coverage": 1.0,
+      "matched_keywords": [
+        "restart",
+        "GlobalProtect"
+      ],
+      "expected_keywords": [
+        "restart",
+        "GlobalProtect"
+      ],
+      "latency_sec": 5.89
+    },
+    {
+      "id": "q3",
+      "question": "How much paternity leave is a male employee entitled to?",
+      "expected_source": "HR_Leave_Policy.pdf",
+      "retrieved_sources": [
+        "HR_Leave_Policy.pdf",
+        "Global_Employee_Handbook.pdf",
+        "Global_Employee_Handbook.pdf",
+        "Global_Employee_Handbook.pdf"
+      ],
+      "retrieval_hit": true,
+      "mrr": 1.0,
+      "answer": "A male employee is entitled to **10\u202fworking days of paternity leave**, which must be taken within three months of the child\u2019s birth\u3010S1\u3011.",
+      "confidence": "High",
+      "confidence_score": 1.0,
+      "keyword_coverage": 1.0,
+      "matched_keywords": [
+        "10",
+        "working days"
+      ],
+      "expected_keywords": [
+        "10",
+        "working days"
+      ],
+      "latency_sec": 2.04
+    },
+    {
+      "id": "q4",
+      "question": "Who is responsible for provisioning a new employee's laptop before their joining date?",
+      "expected_source": "Employee_Onboarding_SOP.pptx",
+      "retrieved_sources": [
+        "Employee_Onboarding_SOP.pptx",
+        "dsid_11b4dc5c498c472b9827a245f5a0720e__equitable-onboarding-and-role-access-playbook-2028.txt",
+        "Employee_Onboarding_SOP.pptx",
+        "HR_Remote_Work_Policy_v2.docx"
+      ],
+      "retrieval_hit": true,
+      "mrr": 1.0,
+      "answer": "The IT department is responsible for provisioning a new employee\u2019s laptop (as well as corporate email and Slack)\u202f\u2014\u202ftypically three days before the employee\u2019s start date\u3010S1\u3011.",
+      "confidence": "High",
+      "confidence_score": 1.0,
+      "keyword_coverage": 1.0,
+      "matched_keywords": [
+        "IT"
+      ],
+      "expected_keywords": [
+        "IT"
+      ],
+      "latency_sec": 4.51
+    },
+    {
+      "id": "q5",
+      "question": "What happens if I don't receive the MFA push notification on my phone?",
+      "expected_source": "IT_VPN_Support_Guide.docx",
+      "retrieved_sources": [
+        "IT_Password_Security_Policy_v1.pdf",
+        "IT_VPN_Support_Guide.docx",
+        "Information_Security_Awareness_Training.pptx",
+        "IT_Password_Security_Policy_v1.pdf"
+      ],
+      "retrieval_hit": true,
+      "mrr": 0.5,
+      "answer": "The documents you have don\u2019t spell out a specific \u201cwhat\u2011to\u2011do\u201d step for a missing MFA push notification.\u202fWhat they do say is:\n\n*\u202fMFA is required for all corporate accounts (per the Password and Account Security Policy)\u202f[S3].  \n*\u202fIf you encounter an authentication\u2011related issue (such as a VPN login problem) that you can\u2019t resolve, the VPN Access and Troubleshooting Guide instructs you to raise a P2 ticket on the IT Service Portal or contact the IT Helpdesk at extension\u202f4100 (business hours)\u202f[S2].\n\nBecause a failed MFA push is an authentication problem, the safest next step is to contact the IT Helpdesk (or open a ticket) for assistance. If you need a more detailed procedure, you should ask the IT Security team or refer to any updated MFA troubleshooting documentation that may exist beyond the excerpts provided.",
+      "confidence": "High",
+      "confidence_score": 1.0,
+      "keyword_coverage": 0.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "resend",
+        "SMS"
+      ],
+      "latency_sec": 4.83
+    },
+    {
+      "id": "q6",
+      "question": "Can unused sick leave be carried forward to next year?",
+      "expected_source": "HR_Leave_Policy.pdf",
+      "retrieved_sources": [
+        "HR_Leave_Policy.pdf",
+        "HR_Leave_Policy.pdf",
+        "Global_Employee_Handbook.pdf",
+        "Global_Employee_Handbook.pdf"
+      ],
+      "retrieval_hit": true,
+      "mrr": 1.0,
+      "answer": "No.\u202fAccording to the Employee Leave Policy, sick leave (12\u202fdays per year) \u201cis not carried forward\u201d\u202f[S1].",
+      "confidence": "High",
+      "confidence_score": 1.0,
+      "keyword_coverage": 0.5,
+      "matched_keywords": [
+        "no"
+      ],
+      "expected_keywords": [
+        "cannot",
+        "no"
+      ],
+      "latency_sec": 3.05
+    },
+    {
+      "id": "q7",
+      "question": "What is the reimbursement policy for international travel business class upgrades?",
+      "expected_source": null,
+      "retrieved_sources": [
+        "Finance_Travel_Expense_Reimbursement_Policy.pdf",
+        "dsid_37db737f77a6446883ddf996621ff64f__ops-ecosystem-handbook-2026.txt",
+        "dsid_37db737f77a6446883ddf996621ff64f__ops-ecosystem-handbook-2026.txt",
+        "dsid_37db737f77a6446883ddf996621ff64f__ops-ecosystem-handbook-2026.txt"
+      ],
+      "retrieval_hit": true,
+      "mrr": 0.0,
+      "answer": "**Answer:**  \nAn employee can be reimbursed for a business\u2011class upgrade on international travel only if the upgrade is **justified and pre\u2011approved**.  \n\n* **Approval level** \u2013 Upgrades generally require **Director approval** (or higher)\u202f[S2][S4].  \n* **Flight\u2011duration rule** \u2013 For flights longer than\u202f10\u202fhours (which most international trips are), the **Travel Policy** specifies that **VP\u2011plus approval** is required\u202f[S1].  \n* **Reimbursement conditions** \u2013 The expense must be documented with an itemized receipt and submitted **within\u202f60\u202fdays of the travel date**\u202f[S2].  \n* **Personal items** (e.g., minibar charges) are not reimbursable\u202f[S2][S4].\n\n**If you need the upgrade approved**, submit a justification to your Director (or VP for >10\u2011hour flights) and obtain the required approval before booking. Then keep the receipt and file the claim within the 60\u2011day window.  \n\n*If you are unsure whether your flight exceeds the 10\u2011hour threshold or need help obtaining the appropriate approval, contact People Ops or Finance for clarification.*",
+      "confidence": "High",
+      "confidence_score": 1.0,
+      "keyword_coverage": 0.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "cannot find",
+        "don't have",
+        "no information",
+        "not contain"
+      ],
+      "latency_sec": 19.74
+    },
+    {
+      "id": "q8",
+      "question": "How many days per week can I work remotely?",
+      "expected_source": "HR_Remote_Work_Policy_v2.docx",
+      "retrieved_sources": [
+        "HR_Remote_Work_Policy_v2.docx",
+        "Global_Employee_Handbook.pdf",
+        "HR_Remote_Work_Policy_v2.docx",
+        "HR_Remote_Work_Policy_v2.docx"
+      ],
+      "retrieval_hit": true,
+      "mrr": 1.0,
+      "answer": "You can work remotely up to **5 days per week** (i.e., fully remote) if your role is eligible\u202f\u2014\u202fthe 2\u2011day\u2011per\u2011week limit from the 2024 version no longer applies\u3010S1\u3011\u3010S4\u3011.",
+      "confidence": "High",
+      "confidence_score": 1.0,
+      "keyword_coverage": 0.3333333333333333,
+      "matched_keywords": [
+        "5"
+      ],
+      "expected_keywords": [
+        "5",
+        "no cap",
+        "discretion"
+      ],
+      "latency_sec": 4.67
+    },
+    {
+      "id": "q9",
+      "question": "Is MFA required for all corporate accounts or just finance and HR systems?",
+      "expected_source": "IT_Password_Security_Policy_v2.pdf",
+      "retrieved_sources": [
+        "IT_Password_Security_Policy_v2.pdf",
+        "IT_Password_Security_Policy_v1.pdf",
+        "Information_Security_Awareness_Training.pptx",
+        "IT_Password_Security_Policy_v1.pdf"
+      ],
+      "retrieval_hit": true,
+      "mrr": 1.0,
+      "answer": "Yes. Under the current (v2.0)\u202fPassword and Account Security Policy, multi\u2011factor authentication (Okta\u202fVerify) is mandatory for **all corporate accounts and applications**, not just finance and HR systems\u3010S1\u3011. The security awareness training also reinforces that \u201cMFA is mandatory for all corporate accounts, per the Password and Account Security Policy\u201d\u3010S3\u3011.",
+      "confidence": "High",
+      "confidence_score": 1.0,
+      "keyword_coverage": 1.0,
+      "matched_keywords": [
+        "all",
+        "mandatory"
+      ],
+      "expected_keywords": [
+        "all",
+        "mandatory"
+      ],
+      "latency_sec": 5.53
+    },
+    {
+      "id": "q10",
+      "question": "What is the minimum password length required by IT policy?",
+      "expected_source": "IT_Password_Security_Policy_v2.pdf",
+      "retrieved_sources": [
+        "IT_Password_Security_Policy_v1.pdf",
+        "IT_Password_Security_Policy_v2.pdf",
+        "IT_Password_Security_Policy_v2.pdf",
+        "IT_Password_Security_Policy_v2.pdf"
+      ],
+      "retrieval_hit": true,
+      "mrr": 0.5,
+      "answer": "The current IT policy requires a **minimum password (passphrase) length of\u202f12\u202fcharacters**\u3010S2\u3011\u3010S3\u3011. This requirement is part of version\u202f2.0, which supersedes the earlier 8\u2011character rule in version\u202f1.0.",
+      "confidence": "High",
+      "confidence_score": 1.0,
+      "keyword_coverage": 1.0,
+      "matched_keywords": [
+        "12"
+      ],
+      "expected_keywords": [
+        "12"
+      ],
+      "latency_sec": 2.45
+    },
+    {
+      "id": "q11",
+      "question": "Who should Support page for a customer-impacting issue on a Dedicated tier deployment?",
+      "expected_source": "dsid_0d9cae83ac4945cbb33e9dfd9f8bf6eb__escalation-paths-and-contacts-2026.txt",
+      "retrieved_sources": [
+        "dsid_0d9cae83ac4945cbb33e9dfd9f8bf6eb__escalation-paths-and-contacts-2026.txt",
+        "dsid_0d9cae83ac4945cbb33e9dfd9f8bf6eb__escalation-paths-and-contacts-2026.txt",
+        "dsid_0d9cae83ac4945cbb33e9dfd9f8bf6eb__escalation-paths-and-contacts-2026.txt",
+        "dsid_0d9cae83ac4945cbb33e9dfd9f8bf6eb__escalation-paths-and-contacts-2026.txt"
+      ],
+      "retrieval_hit": true,
+      "mrr": 1.0,
+      "answer": "Support should page the **SRE on\u2011call (SRE Capacity)** for a customer\u2011impacting issue on a Dedicated\u2011tier deployment.\u202fThe Dedicated escalation path defaults to SRE Capacity for scaling or capacity\u2011related symptoms, with the Platform team consulted only for control\u2011plane or policy\u2011configuration issues\u3010S3\u3011.\u202fFor after\u2011hours P0/P1 incidents affecting Dedicated (or Enterprise/Private), the process is to initiate a bridge and page the relevant on\u2011call, which for Dedicated is the SRE on\u2011call\u3010S4\u3011.",
+      "confidence": "High",
+      "confidence_score": 1.0,
+      "keyword_coverage": 0.3333333333333333,
+      "matched_keywords": [
+        "escalat"
+      ],
+      "expected_keywords": [
+        "escalat",
+        "on-call",
+        "oncall"
+      ],
+      "latency_sec": 1.91
+    },
+    {
+      "id": "q12",
+      "question": "What was the outcome of the Atlas product launch in terms of active users?",
+      "expected_source": "Ops_Product_Launch_Retrospective.pptx",
+      "retrieved_sources": [
+        "Ops_Product_Launch_Retrospective.pptx",
+        "Ops_Product_Launch_Retrospective.pptx",
+        "Ops_Product_Launch_Retrospective.pptx",
+        "Ops_Product_Launch_Retrospective.pptx"
+      ],
+      "retrieval_hit": true,
+      "mrr": 1.0,
+      "answer": "The Atlas launch achieved **40,000 active users in the first 30\u202fdays**, which is **114\u202f% of the 35,000\u2011user target**\u3010S1\u3011\u3010S3\u3011.",
+      "confidence": "High",
+      "confidence_score": 1.0,
+      "keyword_coverage": 0.5,
+      "matched_keywords": [
+        "40,000"
+      ],
+      "expected_keywords": [
+        "40,000",
+        "40000"
+      ],
+      "latency_sec": 3.49
+    },
+    {
+      "id": "q13",
+      "question": "What is Northwind's Annual Recurring Revenue (ARR)?",
+      "expected_source": "Q3_FY2026_Financial_Report.pdf",
+      "retrieved_sources": [
+        "Global_Employee_Handbook.pdf",
+        "HR_Employee_Benefits_Guide.pdf",
+        "Global_Employee_Handbook.pdf",
+        "Global_Employee_Handbook.pdf"
+      ],
+      "retrieval_hit": false,
+      "mrr": 0.0,
+      "answer": "The provided excerpts do not contain any information about Northwind Analytics,\u202fInc.\u2019s Annual Recurring Revenue (ARR). To obtain that figure, you should contact the Finance department or refer to the company\u2019s internal financial reporting documents.",
+      "confidence": "High",
+      "confidence_score": 1.0,
+      "keyword_coverage": 0.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "82.6"
+      ],
+      "latency_sec": 1.26
+    },
+    {
+      "id": "q14",
+      "question": "What is the reallocation recommendation to cover the Operations facilities maintenance overrun?",
+      "expected_source": "Finance_Q3_Budget_Report.pptx",
+      "retrieved_sources": [
+        "Finance_Q3_Budget_Report.pptx",
+        "Finance_Q3_Budget_Report.pptx",
+        "Finance_Q3_Budget_Report.pptx",
+        "Finance_Q3_Budget_Report.pptx"
+      ],
+      "retrieval_hit": true,
+      "mrr": 1.0,
+      "answer": "The report recommends **reallocating $150\u202fK of the Q3 favorable variance from Engineering to Operations** to cover the facilities\u2011maintenance overrun, subject to CFO approval\u3010S1\u3011.",
+      "confidence": "High",
+      "confidence_score": 1.0,
+      "keyword_coverage": 1.0,
+      "matched_keywords": [
+        "150",
+        "Engineering"
+      ],
+      "expected_keywords": [
+        "150",
+        "Engineering"
+      ],
+      "latency_sec": 2.72
+    },
+    {
+      "id": "q15",
+      "question": "What is the retention period for security incident records?",
+      "expected_source": "Compliance_Records_Retention_Policy.pdf",
+      "retrieved_sources": [
+        "Compliance_Records_Retention_Policy.pdf",
+        "dsid_37db737f77a6446883ddf996621ff64f__ops-ecosystem-handbook-2026.txt",
+        "Compliance_Records_Retention_Policy.pdf",
+        "dsid_37db737f77a6446883ddf996621ff64f__ops-ecosystem-handbook-2026.txt"
+      ],
+      "retrieval_hit": true,
+      "mrr": 1.0,
+      "answer": "The policy sets the retention period for **security incident records at\u202f7\u202fyears** (to satisfy compliance/audit requirements)\u3010S1\u3011.\u202fIf a record is subject to a litigation hold or regulatory inquiry, it must be kept longer until the hold is released\u3010S1\u3011.",
+      "confidence": "High",
+      "confidence_score": 1.0,
+      "keyword_coverage": 0.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "7 years"
+      ],
+      "latency_sec": 4.04
+    },
+    {
+      "id": "q16",
+      "question": "What are the statutory annual leave requirements in Germany?",
+      "expected_source": "Global_Employee_Handbook.pdf",
+      "retrieved_sources": [
+        "Global_Employee_Handbook.pdf",
+        "Global_Employee_Handbook.pdf",
+        "Global_Employee_Handbook.pdf",
+        "Global_Employee_Handbook.pdf"
+      ],
+      "retrieval_hit": true,
+      "mrr": 1.0,
+      "answer": "The handbook states that employees based in Germany are required by law to receive **a minimum of\u202f24\u202fworking days of annual leave per year** (the company\u2019s own policy provides 28 days)\u3010S1\u3011.",
+      "confidence": "High",
+      "confidence_score": 1.0,
+      "keyword_coverage": 1.0,
+      "matched_keywords": [
+        "24",
+        "28"
+      ],
+      "expected_keywords": [
+        "24",
+        "28"
+      ],
+      "latency_sec": 8.73
+    }
+  ]
+}

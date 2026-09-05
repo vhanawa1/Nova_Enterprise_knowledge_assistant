@@ -1,0 +1,98 @@
+[
+  {
+    "id": "q1",
+    "question": "How many days of annual leave do I accrue per year?",
+    "expected_source": "HR_Leave_Policy.pdf",
+    "expected_answer_contains": ["21", "1.75"]
+  },
+  {
+    "id": "q2",
+    "question": "What should I do if my VPN connection keeps timing out?",
+    "expected_source": "IT_VPN_Support_Guide.docx",
+    "expected_answer_contains": ["restart", "GlobalProtect"]
+  },
+  {
+    "id": "q3",
+    "question": "How much paternity leave is a male employee entitled to?",
+    "expected_source": "HR_Leave_Policy.pdf",
+    "expected_answer_contains": ["10", "working days"]
+  },
+  {
+    "id": "q4",
+    "question": "Who is responsible for provisioning a new employee's laptop before their joining date?",
+    "expected_source": "Employee_Onboarding_SOP.pptx",
+    "expected_answer_contains": ["IT"]
+  },
+  {
+    "id": "q5",
+    "question": "What happens if I don't receive the MFA push notification on my phone?",
+    "expected_source": "IT_VPN_Support_Guide.docx",
+    "expected_answer_contains": ["resend", "SMS"]
+  },
+  {
+    "id": "q6",
+    "question": "Can unused sick leave be carried forward to next year?",
+    "expected_source": "HR_Leave_Policy.pdf",
+    "expected_answer_contains": ["cannot", "no"]
+  },
+  {
+    "id": "q7",
+    "question": "What is the reimbursement policy for international travel business class upgrades?",
+    "expected_source": null,
+    "expected_answer_contains": ["cannot find", "don't have", "no information", "not contain"]
+  },
+  {
+    "id": "q8",
+    "question": "How many days per week can I work remotely?",
+    "expected_source": "HR_Remote_Work_Policy_v2.docx",
+    "expected_answer_contains": ["5", "no cap", "discretion"]
+  },
+  {
+    "id": "q9",
+    "question": "Is MFA required for all corporate accounts or just finance and HR systems?",
+    "expected_source": "IT_Password_Security_Policy_v2.pdf",
+    "expected_answer_contains": ["all", "mandatory"]
+  },
+  {
+    "id": "q10",
+    "question": "What is the minimum password length required by IT policy?",
+    "expected_source": "IT_Password_Security_Policy_v2.pdf",
+    "expected_answer_contains": ["12"]
+  },
+  {
+    "id": "q11",
+    "question": "Who should Support page for a customer-impacting issue on a Dedicated tier deployment?",
+    "expected_source": "dsid_0d9cae83ac4945cbb33e9dfd9f8bf6eb__escalation-paths-and-contacts-2026.txt",
+    "expected_answer_contains": ["escalat", "on-call", "oncall"]
+  },
+  {
+    "id": "q12",
+    "question": "What was the outcome of the Atlas product launch in terms of active users?",
+    "expected_source": "Ops_Product_Launch_Retrospective.pptx",
+    "expected_answer_contains": ["40,000", "40000"]
+  },
+  {
+    "id": "q13",
+    "question": "What is Northwind's Annual Recurring Revenue (ARR)?",
+    "expected_source": "Q3_FY2026_Financial_Report.pdf",
+    "expected_answer_contains": ["82.6"]
+  },
+  {
+    "id": "q14",
+    "question": "What is the reallocation recommendation to cover the Operations facilities maintenance overrun?",
+    "expected_source": "Finance_Q3_Budget_Report.pptx",
+    "expected_answer_contains": ["150", "Engineering"]
+  },
+  {
+    "id": "q15",
+    "question": "What is the retention period for security incident records?",
+    "expected_source": "Compliance_Records_Retention_Policy.pdf",
+    "expected_answer_contains": ["7 years"]
+  },
+  {
+    "id": "q16",
+    "question": "What are the statutory annual leave requirements in Germany?",
+    "expected_source": "Global_Employee_Handbook.pdf",
+    "expected_answer_contains": ["24", "28"]
+  }
+]
